@@ -21,22 +21,22 @@ function App({ totalState, dispatchFun }) {
     <div className="App">
       <Router>
         <Routes>
-          {/* {condition ? */}
-          <Route path='/' element={<LoginPage
-            setToken={setToken}
-            auth={auth}
-            setUserName={setUserName}
-          />} /> :
+          {condition ?
+            <Route path='/' element={<LoginPage
+              setToken={setToken}
+              auth={auth}
+              setUserName={setUserName}
+            />} /> :
 
-          <Route path='/details' element={<SearchPage
-            token={token}
-            auth={auth}
-            userName={userName}
-            totalState={totalState}
-            dispatchFun={dispatchFun}
-          />} />
+            <Route path='/details' element={<SearchPage
+              token={token}
+              auth={auth}
+              userName={userName}
+              totalState={totalState}
+              dispatchFun={dispatchFun}
+            />} />
 
-          {/* } */}
+          }
           <Route path='*' element={<Navigate to={condition ? '/' : '/details'} />} />
         </Routes>
       </Router>

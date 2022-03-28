@@ -1,8 +1,6 @@
 import GoogleLogin from "react-google-login";
 import { useNavigate } from "react-router-dom";
 
-
-
 const LoginPage = ({ setToken, auth, setUserName }) => {
     const navigate = useNavigate();
     const response = ((res) => {
@@ -27,9 +25,6 @@ const LoginPage = ({ setToken, auth, setUserName }) => {
                     cookiePolicy={'single_host_origin'}
                     scope={"https://www.googleapis.com/auth/youtube.readonly"}
                 />
-                <iframe>
-                    <video src="https://www.youtube.com/watch?v=TBieFYBvhDo" />
-                </iframe>
             </div>
         </div>
     )
